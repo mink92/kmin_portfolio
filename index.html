@@ -3,34 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>K_MIN PORTFOLIO</title>
-    <meta property="og:title" content="K_MIN'S PORTFOLIO">
-    <meta property="og:description" content="K_MIN'S WEB PORTFOLIO">
-    <meta property="og:image" content="{{ url_for('images', filename='ogimage.png') }}">
+    <title>K_MIN'S PORTFOLIO</title>
+    <meta property="og:title" content="K_MIN'S PORTFOLIO" />
+    <meta property="og:description" content="K_MIN'S WEB PORTFOLIO" />
+    <meta
+      property="og:image"
+      content="{{ url_for('images', filename='ogimage.png') }}"
+    />
     <link
-      rel="shortcut icon"
+      rel="icon"
       type="image/png"
       sizes="16x16"
-      href="images/favicon-16x16.png?"
+      href="/images/favicon-16x16.png"
     />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/scroll.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/slide.css" />
+
+    <!-- slick 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <link rel="stylesheet" href="css/slider.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- slick 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="js/scroll.js"></script>
-    <script src="js/slide.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/index.js"></script>
+
+    <!-- AOS 플러그인 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- 폰트어썸 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
       <div class="cursor">
-        <img src="images/cloud.png" alt="flow_img" />
+        <img src="images/cloud.png" alt="fllow_img" />
       </div>
       <div class="wrap flex">
         <h1 class="logo">
@@ -42,9 +67,9 @@
           <h2 class="blind">주메뉴</h2>
           <ul class="gnb flex">
             <li><a href="https://mink92.github.io/kmin_portfolio/">home</a></li>
-            <li><a href="#aboutme">about me</a></li>
-            <li><a href="#skills">skills</a></li>
+            <li><a href="#about">about</a></li>
             <li><a href="#work">work</a></li>
+            <li><a href="#design">design</a></li>
             <li><a href="#contact">contact</a></li>
           </ul>
         </nav>
@@ -54,16 +79,14 @@
       <div class="intro">
         <h2>WEB PUBLISHER<br />KIM KANGMIN</h2>
         <div class="wrapper">
-          <div class="typing">안녕하세요. 신입 웹퍼블리셔 김강민 입니다.</div>
+          <p>꼼꼼함과 계획적으로 더 나은 미래를 향해 나아가는</p>
+          <div class="typing">
+            <span>웹퍼블리셔 김강민 입니다.</span>
+          </div>
           <!--//typing-->
-          <p>
-            이 포트폴리오는 웹퍼블리셔를 꿈꾸며 준비한 제 노력의 결과인 작업물이
-            담겨 있습니다!
-          </p>
         </div>
         <!--//wrapper-->
       </div>
-      <!--//intro-->
       <!--//intro-->
       <div class="scroll_down_box">
         <div class="scroll_down flex">
@@ -75,131 +98,219 @@
       <!--//scroll_down_box-->
     </header>
     <main>
-      <section class="content aboutme">
-        <a name="aboutme"></a>
-        <h2>about me</h2>
-        <div class="profile_photo">
-          <div class="bg_color">
-            <img src="images/memoticon_2.png" alt="about me photo" />
-          </div>
-          <!--//bg_color-->
-        </div>
-        <!--//profile_photo-->
-        <div class="profile_content">
-          <h2 class="blind">프로필</h2>
-          <ul>
-            <li>이름 : 김강민</li>
-            <li>생년월일 : 1992.08.02</li>
-            <li>학력 : 동서울대학교 부동산개발학과 졸업</li>
-            <li>수료 내역 : 2023.08 ~ 2024.01 이젠 아카데미</li>
-            <li>UI/UX 웹디자인 with 피그마(Figma) 과정 수료 (5개월)</li>
+      <section class="content about">
+        <a name="about"></a>
+        <h2>about</h2>
+        <div class="about_content flex">
+          <ul class="about_left">
             <li>
-              자격증 : GTQ 1급, GTQi 1급, ITQ 아래한글, ITQ 엑셀,<br />ITQ
-              파워포인트, 전산회계 1급, FAT 1급
+              <h3>experience</h3>
+              <ul class="txt_wrap">
+                <li>
+                  <p>
+                    <strong class="first">2023.08 - 2024.01</strong>
+                    <br />이젠IT UI/UX 웹디자인&퍼블리싱 과정 수료
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong class="second">2014.04 - 2022.01</strong>
+                    <br />회계팀 근무
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong class="third">2011.03 - 2014.02</strong>
+                    <br />동서울대학교 부동산개발학과 졸업
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>licence</h3>
+              <ul class="txt_wrap">
+                <li>
+                  <p>
+                    <strong class="four">전산회계 1급</strong>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong class="five">FAT(회계정보처리) 1급</strong>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong class="six">ITQ 아래한글</strong>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong class="seven">ITQ 한글엑셀</strong>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong class="eight">ITQ 한글파워포인트</strong>
+                  </p>
+                </li>
+              </ul>
             </li>
           </ul>
-        </div>
-        <!--//profile_content-->
-      </section>
-      <section class="content skills">
-        <a name="skills"></a>
-        <h2>skills</h2>
-        <div class="title">
-          <div class="skills flex">
-            <div class="develop_skills">
-              <h3>Develop Tech</h3>
-              <ul>
-                <li><img src="images/dev_skills.png" alt="html5" /></li>
-              </ul>
-            </div>
-            <!--//develop_skills-->
-            <div class="design_skills">
-              <h3>Design Tech</h3>
-              <ul>
-                <li><img src="images/des_skills.png" alt="photoshop" /></li>
-              </ul>
-            </div>
-            <!--//design_skills-->
-            <div class="tool_skills">
-              <h3><a name="tool"></a>Tool</h3>
-              <ul>
-                <li><img src="images/tool_skills.png" alt="vscode" /></li>
-              </ul>
-            </div>
-            <!--//tool_skills-->
+          <!--//about_left-->
+          <div class="about_right">
+            <h3>skill</h3>
+            <ul class="txt_wrap">
+              <li><img src="images/dev_skills.png" alt="develop skill" /></li>
+              <li><img src="images/des_skills.png" alt="design skill" /></li>
+              <li><img src="images/tool_skills.png" alt="tool skill" /></li>
+            </ul>
           </div>
+          <!--//about_right-->
         </div>
+        <!--//about_content-->
       </section>
+
       <section class="content work">
         <a name="work"></a>
         <h2>work</h2>
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="https://miny92.dothome.co.kr" target="_blank"
-                ><img src="images/subway.png" alt="써브웨이 메인 페이지"
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="https://miny92.dothome.co.kr/login.html" target="_blank"
-                ><img
-                  src="images/subway_login.png"
-                  alt="써브웨이 로그인 페이지"
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="https://miny92.dothome.co.kr/binggrae" target="_blank"
-                ><img src="images/binggrae.png" alt="빙그레 메인 페이지"
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <a
-                href="https://miny92.dothome.co.kr/binggrae/product.html"
-                target="_blank"
-                ><img
-                  src="images/binggrae_product.png"
-                  alt="빙그레 제품 소개 페이지"
-              /></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" target="_blank"
-                ><img src="images/bomdama.png" alt="봄담아 메인 페이지" />
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="#" target="_blank"
-                ><img
-                  src="images/findart_main.png"
-                  alt="파인드아트 메인 페이지"
-                />
-              </a>
+        <div class="v-story-wrap con">
+            <div class="v-story-slider" data-aos="fade-up">
+              <div class="slider-item">
+                <a href="#" class="block">
+                  <div class="img-box">
+                    <img src="images/findart-Mockup.png" alt="파인드아트" />
+                  </div>
+                  <div class="discover">
+                    <span class="discover-btn block"></span>
+                    <span class="discover-txt block">파인드아트_팀 프로젝트</span>
+                  </div>
+                </a>
+                <div class="v-story-desc-list">
+                  <p class="v-story-desc-tt">파인드아트_팀 프로젝트(백엔드 협업 진행 중)</p>
+                  <p class="v-story-desc"><a href="https://www.figma.com/file/HQH3seaKqhg1aq1HziRzr1/findart?type=design&node-id=0%3A1&mode=design&t=eENgQXvPMXhlI9AQ-1"  target="_blank">피그마</a></p>
+                  <p class="v-story-desc"><a href="">깃허브</a></p>
+                </div>
+              </div>
+              <div class="slider-item">
+                <a href="#" class="block">
+                  <div class="img-box">
+                    <img src="images/meme-maker-Mockup.png" alt="밈 메이커" />
+                  </div>
+                  <div class="discover">
+                    <span class="discover-btn block"></span>
+                    <span class="discover-txt block">밈 메이커_챌린지</span>
+                  </div>
+                </a>
+                <div class="v-story-desc-list">
+                  <p class="v-story-desc-tt">바닐라js로 만든 그림 앱_노마드 코더 챌린지 </p>
+                  <p class="v-story-desc"><a href="https://mink92.github.io/meme-maker/" target="_blank">웹사이트</a></p>
+                  <p class="v-story-desc"><a href="https://github.com/mink92/meme-maker" target="_blank">깃허브</a></p>
+                </div>
+              </div>
+              <div class="slider-item">
+                <a href="#" class="block">
+                  <div class="img-box">
+                    <img src="images/bomdama-Mockup.png" alt="봄담아" />
+                  </div>
+                  <div class="discover">
+                    <span class="discover-btn block"></span>
+                    <span class="discover-txt block">봄담아_clone site</span>
+                  </div>
+                </a>
+                <div class="v-story-desc-list">
+                  <p class="v-story-desc-tt">구현 : 메인 페이지</p>
+                  <p class="v-story-desc"><a href="https://mink92.github.io/bomdama_clone/" target="_blank">웹사이트</a></p>
+                  <p class="v-story-desc"><a href="https://github.com/mink92/bomdama_clone" target="_blank">깃허브</a></p>
+                </div>
+              </div>
+              <div class="slider-item">
+                <a href="#" class="block">
+                  <div class="img-box">
+                    <img src="images/binggrae-Mockup.png" alt="빙그레" />
+                  </div>
+                  <div class="discover">
+                    <span class="discover-btn block"></span>
+                    <span class="discover-txt block">빙그레_clone site</span>
+                  </div>
+                </a>
+                <div class="v-story-desc-list">
+                  <p class="v-story-desc-tt">구현 : 메인 페이지, 제품 페이지</p>
+                  <p class="v-story-desc"><a href="https://mink92.github.io/binggrae_clone/" target="_blank">웹사이트</a></p>
+                  <p class="v-story-desc"><a href="https://github.com/mink92/binggrae_clone" target="_blank">깃허브</a></p>
+                </div>
+              </div>
+              <div class="slider-item">
+                <a href="#" class="block">
+                  <div class="img-box block">
+                    <img src="images/subway-Mockup.png" alt="subway" />
+                  </div>
+                  <div class="discover">
+                    <span class="discover-btn block"></span>
+                    <span class="discover-txt block">subway_clone site</span>
+                  </div>
+                </a>
+                <div class="v-story-desc-list">
+                  <p class="v-story-desc-tt">구현 : 메인 페이지, 로그인 페이지</p>
+                  <p class="v-story-desc"><a href="https://mink92.github.io/subway_clone" target="_blank">웹사이트</a></p>
+                  <p class="v-story-desc"><a href="https://github.com/mink92/subway_clone" target="_blank">깃허브</a></p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
       </section>
+
+      <section class="content design">
+        <a name="design"></a>
+        <h2>design</h2>
+        <!-- <div class="aboutme_photo">
+          <div class="bg_color">
+            <img src="images/memoticon_2.png" alt="about me photo" />
+          </div>
+        </div> -->
+       <div class="design_box">
+        <img src="images/design_1.png" alt="">
+        <img src="images/design_2.png" alt="">
+        <img src="images/banner_1.png" alt="">
+        <img src="images/banner_2.png" alt="">
+       </div>
+        
+      </section>
+
       <section class="content contact">
         <a name="contact"></a>
         <h2>contact</h2>
-        <div class="info">
-          <p class="email">
-            <a href="mailto:min_kk@kakao.com">min_kk@kakao.com</a>
-          </p>
-          <p class="text">
-            웹표준 및 웹접근성을 준수하며, 최적의 사용자 경험을 제공하는 것을
-            목표로 하는<br />
-            웹퍼블리셔 김강민이 되겠습니다.
-          </p>
-          <p class="thankyou">지금까지 포트폴리오를 봐주셔서 감사합니다 :)</p>
+          <div class="email_box">
+            <div class="email flex">
+              <a href="mailto:min_kk@kakao.com">min_kk@kakao.com</a>
+              <div>
+                <a href="mailto:min_kk@kakao.com">send email</a>
+              </div>
+            </div>
+            <!--//email-->
+            <p class="text">
+              시멘틱 마크업과 웹표준 및 웹접근성을 준수하며, 최적의 사용자 경험을 제공하는 웹퍼블리셔 김강민이 되겠습니다.
+            </p>
+            <p class="thankyou">지금까지 포트폴리오를 봐주셔서 감사합니다 :)</p>
+          </div>
+          <!--//email_box-->
+          <div class="kakao">
+              <div class="qr">
+                <a href="https://open.kakao.com/o/sxJU4J1f" target="_blank">
+                  <!-- <img src="images/openchat.png" alt="kakao openchat qrcode"
+                />--></a
+                >
+              </div>
+              <p>qr코드 클릭시 오픈채팅으로 연결 됩니다!</p>
+            </div>
+          </div>
           <div class="rollingH ani">
             <div class="rolling_box">
               <div class="aniText">Thank you for reviewing my portfolio</div>
               <div class="aniText">Thank you for reviewing my portfolio</div>
             </div>
           </div>
-        </div>
-        <!--//info-->
-      </section>
+      </section><!--//contact-->
     </main>
     <footer>
       <p class="text">
@@ -207,4 +318,6 @@
       </p>
       <p class="copy">© 2023 Copyright K_MIN. All Rights Reserved.</p>
     </footer>
+    <script src="js/slider.js"></script>
+  </body>
 </html>

@@ -24,6 +24,10 @@ body {
   cursor: none;
 }
 
+.flex {
+  display: flex;
+}
+
 /* header */
 header {
   position: relative;
@@ -31,7 +35,6 @@ header {
   height: 100%;
   background: url(../images/bg_clouds.png) no-repeat;
   background-size: cover;
-  /* transform: scale(1.2); */
   transition: 0.1s ease-out;
 }
 
@@ -99,7 +102,7 @@ header {
 
 .wrap p:hover {
   background: #016dab;
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -132,20 +135,25 @@ header {
   position: relative;
   width: 100%;
   height: 70px;
-  bottom: 50%;
+  bottom: 30%;
   left: 14%;
   font-family: "Jalnan", sans-serif;
 }
 
+.wrapper p {
+  position: absolute;
+  top: -60px;
+}
+
 .typing {
   position: absolute;
-  width: 360px;
+  width: 220px;
   white-space: nowrap;
   overflow: hidden;
   color: #fff;
   font-size: 1.8rem;
   border-right: 3px solid #fff;
-  animation: typing 2s steps(20), blink 0.6s step-end infinite alternate;
+  animation: typing 2.3s steps(20), blink 0.6s step-end infinite alternate;
 }
 
 @keyframes typing {
@@ -201,7 +209,7 @@ header {
   border-radius: 100%;
   transform: translateX(-50%);
   transition: width 0.3s ease 0s, height 0.3s ease 0s;
-  animation: 1.2s ease-in-out 0s infinite normal none running cursorAni;
+  animation: cursorAni 1.2s ease-in-out 0s infinite;
 }
 
 @keyframes cursorAni {
@@ -226,8 +234,234 @@ header {
 }
 
 /* main */
+/* about */
+.about_content {
+  z-index: -1;
+  position: absolute;
+  top: 23%;
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.about_left,
+.about_right {
+  width: 28%;
+}
+
+.about_left h3,
+.about_right h3 {
+  margin: 60px 0 50px;
+  border-bottom: 2px solid #2b2b2b;
+}
+
+.about_left .txt_wrap,
+.about_right .txt_wrap {
+  padding-left: 30px;
+}
+
+.about_left .txt_wrap li {
+  margin-bottom: 30px;
+}
+
+.about_left .txt_wrap p .first::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  top: 19.4%;
+  left: 21.3%;
+  border: 1px solid #016dab;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.about_left .txt_wrap p .second::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  top: 29%;
+  left: 21.3%;
+  border: 1px solid #016dab;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.about_left .txt_wrap p .third::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  top: 38.8%;
+  left: 21.3%;
+  border: 1px solid #016dab;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.about_left .txt_wrap p .four::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  top: 62.8%;
+  left: 21.3%;
+  border: 1px solid #016dab;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.about_left .txt_wrap p .five::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  top: 69.7%;
+  left: 21.3%;
+  border: 1px solid #016dab;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.about_left .txt_wrap p .six::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  top: 76.7%;
+  left: 21.3%;
+  border: 1px solid #016dab;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.about_left .txt_wrap p .seven::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  top: 83.6%;
+  left: 21.3%;
+  border: 1px solid #016dab;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.about_left .txt_wrap p .eight::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  top: 90.5%;
+  left: 21.3%;
+  border: 1px solid #016dab;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.about_left .txt_wrap p .first::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 60px;
+  top: 21.4%;
+  left: 21.65%;
+  border-left: 1px solid #016dab;
+  box-sizing: border-box;
+}
+
+.about_left .txt_wrap p .second::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 60px;
+  top: 30.9%;
+  left: 21.65%;
+  border-left: 1px solid #016dab;
+  box-sizing: border-box;
+}
+
+.about_left .txt_wrap p .four::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 50px;
+  top: 64.7%;
+  left: 21.65%;
+  border-left: 1px solid #016dab;
+  box-sizing: border-box;
+}
+
+.about_left .txt_wrap p .five::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 50px;
+  top: 71.8%;
+  left: 21.65%;
+  border-left: 1px solid #016dab;
+  box-sizing: border-box;
+}
+
+.about_left .txt_wrap p .six::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 50px;
+  top: 78.6%;
+  left: 21.65%;
+  border-left: 1px solid #016dab;
+  box-sizing: border-box;
+}
+
+.about_left .txt_wrap p .seven::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 50px;
+  top: 85.5%;
+  left: 21.65%;
+  border-left: 1px solid #016dab;
+  box-sizing: border-box;
+}
+
+/* about_right */
+.about_right .txt_wrap li {
+  margin-bottom: 100px;
+}
+
+.about_right ul li:nth-child(1) img {
+  width: 400px;
+  height: 100px;
+}
+
+.about_right ul li:nth-child(2) img {
+  width: 200px;
+  height: 100px;
+}
+
+.about_right ul li:last-child img {
+  width: 300px;
+  height: 100px;
+}
+
+/* work */
+/* slider.css 파일 첨부 */
+
 /* about me */
-.profile_photo {
+/* .aboutme_photo {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -244,100 +478,171 @@ header {
   background: rgba(1, 109, 171, 0.8);
 }
 
-.profile_photo img {
+.aboutme_photo img {
   position: absolute;
   width: 200px;
   height: 340px;
   bottom: -0.5%;
   left: 25%;
-}
+} */
 
-.profile_content {
+/*design*/
+.design_box {
+  z-index: -2;
   position: absolute;
-  width: 500px;
-  top: 45%;
-  left: 54%;
-  line-height: 2;
-  font-family: "Nanum Gothic", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  top: 30%;
+  left: 21.1%;
 }
 
-/* skills */
-.skills {
-  z-index: -1;
+.design_box img:nth-child(1) {
+  position: absolute;
   width: 100%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+  height: 330px;
+  top: 0;
+  right: 6%;
+  object-fit: contain;
+}
+
+.design_box img:nth-child(2) {
+  position: absolute;
+  width: 390px;
+  height: 100%;
+  top: -19.8%;
+  left: 0;
+  object-fit: contain;
+}
+
+.design_box img:nth-child(3) {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  top: 32.9%;
+  right: 0%;
+  object-fit: contain;
+}
+
+.design_box img:last-child {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  top: 32.9%;
+  right: 18.5%;
+  object-fit: contain;
+}
+
+/* contact */
+.contact {
+  width: 100%;
+  height: 100%;
+}
+
+.email_box {
+  position: absolute;
+  width: 600px;
+  height: 280px;
+  top: 28%;
+  left: 21%;
   background: #fff;
 }
 
-.develop_skills h3,
-.design_skills h3,
-.tool_skills h3 {
-  font-size: 2.4rem;
-  padding-bottom: 10%;
-  text-align: center;
+.email_box:hover .email {
+  background: #016dab;
+  border-radius: 25px;
 }
 
-.develop_skills,
-.design_skills,
-.tool_skills {
-  margin-left: 4%;
+.email_box:hover .email > a {
+  color: #fff;
 }
 
-.develop_skills ul li img,
-.tool_skills ul li img {
-  width: 300px;
-  height: 100px;
+.email_box .email:hover div {
+  color: #016dab;
+  background: #fff;
+  box-shadow: 0 2px 0 #2b2b2b, 2px 4px 6px #2b2b2b;
 }
 
-.design_skills ul li img {
-  width: 200px;
-  height: 100px;
-}
-
-/* work */
-/* slide.css 파일 첨부 */
-
-/* contact */
-.info {
-  position: relative;
+.email_box .email {
   width: 100%;
-  height: 100%;
-  margin: auto;
+  height: 280px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transition: all 0.15s linear;
 }
 
-.info .email {
-  position: absolute;
-  width: 30%;
-  height: 50px;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: auto;
+.email_box .email > a {
   font-size: 3.6rem;
   font-weight: 800;
   color: #016dab;
 }
 
-.info .text {
-  position: absolute;
-  width: 40%;
-  height: 70px;
-  top: 50%;
-  left: 35%;
-  font-size: 2rem;
+.email_box .email div {
+  width: 180px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #fff;
+  background: #016dab;
+  border-radius: 25px;
+  box-shadow: 0 2px 0 #016dab, 2px 4px 6px #016dab;
+  transition: all 0.15s linear;
 }
 
-.info .thankyou {
-  position: absolute;
-  width: 40%;
+.email_box .email div a {
+  display: block;
+}
+
+.email_box .text {
+  width: 100%;
+  height: 70px;
+  font-size: 1.8rem;
+  margin: 30px 0 0 25px;
+  font-family: "Jalnan", sans-serif;
+}
+
+.email_box .thankyou {
+  width: 100%;
   height: 30px;
-  top: 60%;
-  left: 35%;
   font-size: 2rem;
+  margin-left: 25px;
+  font-family: "Jalnan", sans-serif;
+}
+
+.kakao {
+  position: absolute;
+  width: 380px;
+  height: 400px;
+  top: 28%;
+  right: 21%;
+  transition: all 0.15s linear;
+}
+
+.kakao:hover {
+  background: #ffd700;
+  border-radius: 25px;
+}
+
+.kakao .qr {
+  width: 227px;
+  height: 229px;
+  margin: 40px auto;
+  background: url(../images/openchat.png) no-repeat center;
+  background-size: cover;
+}
+
+.kakao .qr a {
+  display: block;
+  height: 100%;
+}
+
+.kakao p {
+  font-size: 1.8rem;
+  text-align: center;
+  font-family: "Jalnan", sans-serif;
 }
 
 /* rolling */
@@ -348,8 +653,8 @@ header {
 .rollingH .rolling_box {
   display: flex;
   flex-wrap: nowrap;
-  min-height: 100%;
-  margin-top: 780px;
+  height: 100%;
+  margin-top: 760px;
   white-space: nowrap;
 }
 

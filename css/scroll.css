@@ -8,22 +8,15 @@
 }
 
 .content > h2 {
+  z-index: -1;
   position: absolute;
+  width: 58%;
   top: 20%;
-  left: 24%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  color: #016dab;
-  font-size: 3rem;
-  font-weight: bold;
-  text-shadow: 4px 4px 4px rgba(1, 109, 171, 0.3);
-}
-
-.content > h2::after {
-  position: absolute;
-  content: "";
-  width: 156px;
-  height: 5px;
-  top: 40px;
-  left: 0;
-  background: #016dab;
+  font-size: 4.8rem;
+  font-weight: 900;
+  color: #fff;
+  background: linear-gradient(to top, #016dab 50%, transparent 20%);
+  -webkit-text-stroke: 3px #016dab;
 }
