@@ -492,7 +492,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 30%;
+  top: 28%;
   left: 21.1%;
 }
 
@@ -500,7 +500,7 @@ header {
   position: absolute;
   width: 100%;
   height: 330px;
-  top: 0;
+  top: 0%;
   right: 6%;
   object-fit: contain;
 }
@@ -509,7 +509,7 @@ header {
   position: absolute;
   width: 390px;
   height: 100%;
-  top: -19.8%;
+  top: -15.7%;
   left: 0;
   object-fit: contain;
 }
@@ -518,7 +518,7 @@ header {
   position: absolute;
   width: 100%;
   height: 300px;
-  top: 32.9%;
+  top: 37%;
   right: 0%;
   object-fit: contain;
 }
@@ -527,8 +527,8 @@ header {
   position: absolute;
   width: 100%;
   height: 300px;
-  top: 32.9%;
-  right: 18.5%;
+  top: 37%;
+  right: 18.8%;
   object-fit: contain;
 }
 
