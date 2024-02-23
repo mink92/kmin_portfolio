@@ -273,7 +273,7 @@ header {
   content: "";
   width: 13px;
   height: 13px;
-  top: 19.4%;
+  top: 17.8%;
   left: 21.3%;
   border: 1px solid #016dab;
   border-radius: 50%;
@@ -286,7 +286,7 @@ header {
   content: "";
   width: 13px;
   height: 13px;
-  top: 29%;
+  top: 26.3%;
   left: 21.3%;
   border: 1px solid #016dab;
   border-radius: 50%;
@@ -299,7 +299,7 @@ header {
   content: "";
   width: 13px;
   height: 13px;
-  top: 38.8%;
+  top: 35%;
   left: 21.3%;
   border: 1px solid #016dab;
   border-radius: 50%;
@@ -312,7 +312,7 @@ header {
   content: "";
   width: 13px;
   height: 13px;
-  top: 62.8%;
+  top: 56.9%;
   left: 21.3%;
   border: 1px solid #016dab;
   border-radius: 50%;
@@ -325,7 +325,7 @@ header {
   content: "";
   width: 13px;
   height: 13px;
-  top: 69.7%;
+  top: 63%;
   left: 21.3%;
   border: 1px solid #016dab;
   border-radius: 50%;
@@ -338,7 +338,7 @@ header {
   content: "";
   width: 13px;
   height: 13px;
-  top: 76.7%;
+  top: 69.3%;
   left: 21.3%;
   border: 1px solid #016dab;
   border-radius: 50%;
@@ -351,7 +351,7 @@ header {
   content: "";
   width: 13px;
   height: 13px;
-  top: 83.6%;
+  top: 75.5%;
   left: 21.3%;
   border: 1px solid #016dab;
   border-radius: 50%;
@@ -364,7 +364,33 @@ header {
   content: "";
   width: 13px;
   height: 13px;
-  top: 90.5%;
+  top: 81.9%;
+  left: 21.3%;
+  border: 1px solid #016dab;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.about_left .txt_wrap p .nine::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  top: 88%;
+  left: 21.3%;
+  border: 1px solid #016dab;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.about_left .txt_wrap p .ten::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  top: 94.2%;
   left: 21.3%;
   border: 1px solid #016dab;
   border-radius: 50%;
@@ -376,7 +402,7 @@ header {
   display: block;
   content: "";
   height: 60px;
-  top: 21.4%;
+  top: 19.6%;
   left: 21.65%;
   border-left: 1px solid #016dab;
   box-sizing: border-box;
@@ -387,7 +413,7 @@ header {
   display: block;
   content: "";
   height: 60px;
-  top: 30.9%;
+  top: 28.1%;
   left: 21.65%;
   border-left: 1px solid #016dab;
   box-sizing: border-box;
@@ -398,7 +424,7 @@ header {
   display: block;
   content: "";
   height: 50px;
-  top: 64.7%;
+  top: 58.7%;
   left: 21.65%;
   border-left: 1px solid #016dab;
   box-sizing: border-box;
@@ -409,7 +435,7 @@ header {
   display: block;
   content: "";
   height: 50px;
-  top: 71.8%;
+  top: 64.8%;
   left: 21.65%;
   border-left: 1px solid #016dab;
   box-sizing: border-box;
@@ -420,7 +446,7 @@ header {
   display: block;
   content: "";
   height: 50px;
-  top: 78.6%;
+  top: 71.1%;
   left: 21.65%;
   border-left: 1px solid #016dab;
   box-sizing: border-box;
@@ -431,7 +457,29 @@ header {
   display: block;
   content: "";
   height: 50px;
-  top: 85.5%;
+  top: 77.3%;
+  left: 21.65%;
+  border-left: 1px solid #016dab;
+  box-sizing: border-box;
+}
+
+.about_left .txt_wrap p .eight::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 50px;
+  top: 83.7%;
+  left: 21.65%;
+  border-left: 1px solid #016dab;
+  box-sizing: border-box;
+}
+
+.about_left .txt_wrap p .nine::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 50px;
+  top: 89.8%;
   left: 21.65%;
   border-left: 1px solid #016dab;
   box-sizing: border-box;
